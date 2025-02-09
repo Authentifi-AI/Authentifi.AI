@@ -1,0 +1,28 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 2em;
+  }
+  .hero-content {
+    display: flex;
+    align-items: center;
+  }
+  .hero img {
+    width: 10em;
+    height: auto;
+    margin-right: -1.5em;
+    margin-top: 1.2em;
+  }
+  
+  .hero h1 {
+    font-size: 3.5em;
+  }
+  .hero p {
+    margin-top: -1em;
+    margin-left: 2em;
+    font-size: 1.5em;
+    color: #ccc;
+  }
