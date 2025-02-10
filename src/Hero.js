@@ -10,11 +10,22 @@ export default function Hero() {
                 viewport={{ once: false, amount: 0.7 }}
 
                 class="hero">
-                <div class="hero-content">
-                    <img src="logo.png" alt="Company Logo" />
-                    <h1>AuthentifiAI</h1>
+                <div class="Left-section">
+                    <div class="hero-content">
+                        <img src="logo.png" alt="Company Logo" />
+                        <h1>AuthentifiAI</h1>
+                    </div>
+                    <p class='hero-p'>Authenticate and Verify your human IP while working with AI</p>
+
+                    <div class='card'>
+                        <h2>Students and Researchers Powering <br></br>Authentifi Deep Authentic Engine</h2>
+                        <p>Transform your research experience with our innovative<br></br>blockchain and authenticity system</p>
+                    </div>
                 </div>
-                <p>Authenticate and Verify your human IP while working with AI.</p>
+
+                <div class="Right-section">
+                    <img src='example-image.jpg'/>
+                </div>
             </motion.section>
         </>
     )
