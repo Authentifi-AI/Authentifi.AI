@@ -17,9 +17,9 @@ export default function Hero() {
                     </div>
                     <p class='hero-p'>Authenticate and Verify your human IP while working with AI</p>
 
-                    <div class='card'>
-                        <h2>Students and Researchers Powering <br></br>Authentifi Deep Authentic Engine</h2>
-                        <p>Transform your research experience with our innovative<br></br>blockchain and authenticity system</p>
+                    <div class='hero-card'>
+                        <h2>Students and Researchers Powering Authentifi Deep Authentic Engine</h2>
+                        <p>Transform your research experience with our innovativeblockchain and authenticity system</p>
                     </div>
                 </div>
 

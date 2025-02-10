@@ -1,22 +1,40 @@
 import "./Feature.css"
+import { motion } from "motion/react"
+
+import { ReactComponent as TrustSVG } from './trust-logo.svg'
+import { ReactComponent as SecureSVG } from './secure-logo.svg'
+import { ReactComponent as AiSVG } from './ai-logo.svg'
+
+
+
 
 export default function Feature() {
     const style = {}
     return (
         <>
-            <section class="feature-section">
-                <h2>Re-Imagining the Human-AI Experience</h2>
-                <p>Record your progress, Protect your IP, Publish your work.<br></br>
-                    Your Next Step Towards Trusted and Transparent AI Technology.<br>
-                    </br>Join a growing movement to secure AI collaboration.</p>
-
-                {/* <div id='test'>
-                    <iframe id="test2" loading="lazy"
-                        src="https://www.canva.com/design/DAGeQnA0Ga8/kwUDfK7JlpD8sFt_Ahlbzg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-                    </iframe>
+            <motion.section
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0, transition: { delay: 0.2, duration: 0.6 } }}
+                viewport={{ once: false, amount: 0.7 }}
+                class="feature-section">
+                    
+                <div class='feature-card'>
+                    <TrustSVG class='icon'></TrustSVG>
+                    <h2>Trust Platform Researchers</h2>
+                    <p>Connect with trusted researchers and establish secure research collaborations.</p>
                 </div>
-                <a href="https:&#x2F;   &#x2F;www.canva.com&#x2F;design&#x2F;DAGeQnA0Ga8&#x2F;kwUDfK7JlpD8sFt_Ahlbzg&#x2F;view?utm_content=DAGeQnA0Ga8&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">I want to start a research paper for my English Literature course</a> */}
 
-            </section></>
+                <div class='feature-card'>
+                    <SecureSVG class='icon'></SecureSVG>
+                    <h2>Scured Trust Based Research</h2>
+                    <p>Ensure the authenticity and integrity of your research with blockhain technology.</p>
+                </div>
+
+                <div class='feature-card'>
+                    <AiSVG class='icon'></AiSVG>
+                    <h2>First AI-based Academic Research Engine</h2>
+                    <p>Leverage AI-powered tools to enhance your research capabilities and outcomes.</p>
+                </div>
+            </motion.section></>
     )
 }

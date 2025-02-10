@@ -8,47 +8,49 @@
   .hero-content {
     display: flex;
     align-items: center;
+    text-align: left;
+    margin-left: 2vh;
   }
   .hero img {
-    width: 13em;
+    width: 25vh;
     height: auto;
-    margin-right: -3em;
-    margin-top: 1.2em;
+    margin-right: -6vh;
+    margin-top: 3.5vh;
   }
   
   .hero-content h1 {
-    font-size: 6em;
+    font-size: 12vh;
   }
   .hero-p {
-    margin-top: -3em;
-    margin-left: 3.7em;
-    font-size: 1.5em;
+    margin-top: -9vh;
+    margin-left: 11vh;
+    font-size: 3vh;
     color: #ccc;
   }
 
   .Right-section{
-    padding-right: 5em;
+    padding-right: 20vh;
   }
 
   .Left-section{
-    margin-top: -10em;
+    margin-top: -10vh;
   }
 
-  .card{
+  .hero-card{
     background-color: white;
-    border-radius: 1em;
+    border-radius: 2vh;
     text-align: left;
-    padding: 0.5em 0em 0.5em 1.5em;
-    margin-left:4.5em;
-    width: 62%;
+    padding: 0.5vh 8vh 0.5vh 2vh;
+    margin-left:10vh;
+    width: 62vh;
   }
 
-  .card h2{
+  .hero-card h2{
     color: black;
-    font-size: 1.1em;
+    font-size: 2.25vh;
   }
 
-  .card p{
+  .hero-card p{
     color: grey;
-    font-size: 0.9em;
+    font-size: 1.8vh;
   }
