@@ -1,5 +1,6 @@
 import './Hero.css'
 import { motion } from "motion/react"
+import { ReactComponent as FolderSVG } from './feature-icon2.svg'
 
 export default function Hero() {
     return (
@@ -11,20 +12,26 @@ export default function Hero() {
 
                 class="hero">
                 <div class="Left-section">
-                    <div class="hero-content">
-                        <img src="logo.png" alt="Company Logo" />
-                        <h1>AuthentifiAI</h1>
+                    <h1>Authentifi AI</h1>
+                    <div className='row'>
+                    <img src="logo.png" alt="Company Logo" />
+                    <p class='hero-p'>AI-powered authorship <br></br>verification</p>
                     </div>
-                    <p class='hero-p'>Authenticate and Verify your human IP while working with AI</p>
+                    <p class="second-paragraph">Stay in control of your work while using AI</p>
+                    <button>Register</button>
+                    <p class="third-paragraph">Be among the first to experience it!</p>
 
-                    <div class='hero-card'>
+                    {/* <div class='hero-card'>
                         <h2>Students and Researchers Powering Authentifi Deep Authentic Engine</h2>
                         <p>Transform your research experience with our innovativeblockchain and authenticity system</p>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div class="Right-section">
-                    <img src='example-image.jpg'/>
+                    <h2>Meet our student lucy...</h2>
+                    <video controls >
+                        <source src="HeroLandingPageVideo.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </motion.section>
         </>

@@ -1,9 +1,9 @@
 import "./Feature.css"
 import { motion } from "motion/react"
 
-import { ReactComponent as TrustSVG } from './trust-logo.svg'
-import { ReactComponent as SecureSVG } from './secure-logo.svg'
-import { ReactComponent as AiSVG } from './ai-logo.svg'
+import { ReactComponent as Featureicon1 } from './feature-icon1.svg'
+import { ReactComponent as Featureicon2 } from './feature-icon2.svg'
+import { ReactComponent as Featureicon3 } from './feature-icon3.svg'
 
 
 
@@ -19,22 +19,22 @@ export default function Feature() {
                 class="feature-section">
                     
                 <div class='feature-card'>
-                    <TrustSVG class='icon'></TrustSVG>
-                    <h2>Trust Platform Researchers</h2>
-                    <p>Connect with trusted researchers and establish secure research collaborations.</p>
+                    <Featureicon1 class='icon'></Featureicon1>
+                    <h2>Choose your favorite AI platform and begin working</h2>
                 </div>
 
                 <div class='feature-card'>
-                    <SecureSVG class='icon'></SecureSVG>
-                    <h2>Scured Trust Based Research</h2>
-                    <p>Ensure the authenticity and integrity of your research with blockhain technology.</p>
+                    <Featureicon2 class='icon'></Featureicon2>
+                    <h2>Record your progress in real time, tracking progress and sources</h2>
                 </div>
 
                 <div class='feature-card'>
-                    <AiSVG class='icon'></AiSVG>
-                    <h2>First AI-based Academic Research Engine</h2>
-                    <p>Leverage AI-powered tools to enhance your research capabilities and outcomes.</p>
+                    <Featureicon3 class='icon'></Featureicon3>
+                    <h2>Publish your work with confidence</h2>
                 </div>
-            </motion.section></>
+
+                
+            </motion.section>
+            <p className="feature-p">"Verify your authorship while working with AI to prove your contributions and authenticity."</p></>
     )
 }

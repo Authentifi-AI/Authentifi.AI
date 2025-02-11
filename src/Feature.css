@@ -13,6 +13,8 @@
   text-align: left;
   padding: 2.5vh;
   margin-right: 5vh;
+  width: 30vw;
+  height: 25vh;
 }
 
 .feature-card .icon{
@@ -29,4 +31,10 @@
 .feature-card p{
   font-size: 2vh;
   color: gray;
+}
+
+.feature-p{
+  font-size: 4vh;
+  margin-top: -30vh;
+  color: rgba(255, 255, 255, 0.8);
 }
