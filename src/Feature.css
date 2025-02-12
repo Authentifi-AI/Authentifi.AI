@@ -23,6 +23,12 @@
   border-radius: 100vh;
 }
 
+.feature-card img{
+  width: auto;
+  height: 15vh;
+  /* border-radius: 100vh; */
+}
+
 .feature-card h2{
   font-size: 2.7vh;
   color: black;
