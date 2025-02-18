@@ -1,10 +1,15 @@
 .feature-section {
   height: 100vh;
   width: 100%;
-  display: inline-flex;
-  justify-content: center;
+}
+
+.feature-cards-row{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 2vh;
+  padding-top: 25vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 .feature-card{
@@ -12,8 +17,7 @@
   border-radius: 2vh;
   text-align: left;
   padding: 2.5vh;
-  margin-right: 5vh;
-  width: 30vw;
+  width: 27.5vw;
   height: 25vh;
 }
 
@@ -41,6 +45,5 @@
 
 .feature-p{
   font-size: 4vh;
-  margin-top: -30vh;
   color: rgba(255, 255, 255, 0.8);
 }

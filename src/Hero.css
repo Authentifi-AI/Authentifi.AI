@@ -7,7 +7,6 @@
   }
   
   .Left-section{
-    margin-top: -35vh;
     margin-left: -7vh;
   }
 
@@ -70,7 +69,7 @@
   .Right-section h2{
     font-size: 4vh;
     color: rgba(255, 255, 255, 0.8);
-    margin-left: -30vh;
+    margin-left: -27vh;
   }
 
   video{

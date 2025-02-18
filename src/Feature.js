@@ -18,29 +18,32 @@ export default function Feature() {
                 viewport={{ once: false, amount: 0.7 }}
                 class="feature-section">
 
-                <div class='feature-card'>
-                    <img src="./work.gif" />
-                    <h2>Choose your favorite AI platform and begin working</h2>
+                <div class="feature-cards-row">
+
+                    <div class='feature-card'>
+                        <img src="./work.gif" />
+                        <h2>Choose your favorite AI platform and begin working</h2>
+                    </div>
+
+                    <div class='feature-card'>
+                        <img src="./folder.gif" />
+                        <h2>Record your progress in real time, tracking progress and sources</h2>
+                    </div>
+
+                    <div class='feature-card'>
+                        <img src="./certificate.gif" />
+                        <h2>Publish your work with confidence</h2>
+                    </div>
+
                 </div>
 
-                <div class='feature-card'>
-                    <img src="./folder.gif" />
-                    <h2>Record your progress in real time, tracking progress and sources</h2>
-                </div>
-
-                <div class='feature-card'>
-                    <img src="./certificate.gif" />
-                    <h2>Publish your work with confidence</h2>
-                </div>
+                <p className="feature-p">
+                    "Verify your authorship while working with AI to prove your contributions and authenticity."
+                </p>
 
             </motion.section>
 
-            <motion.p
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0, transition: { delay: 0.2, duration: 0.6 } }}
-                viewport={{ once: false, amount: 0.7 }}
-                className="feature-p">
-                "Verify your authorship while working with AI to prove your contributions and authenticity."
-            </motion.p></>
+
+        </>
     )
 }
