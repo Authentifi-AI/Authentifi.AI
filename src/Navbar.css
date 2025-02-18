@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
     background-color: #2c1b47;
     position: fixed;
@@ -23,17 +23,4 @@
     color: white;
     text-decoration: none;
     padding: 1em 1em;
-  }
-  /* .navbar a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-  } */
-  .nav-links {
-    display: flex;
-    margin-right: 1em;
-  }
-  
-  .nav-links:hover{
-    background-color: #575757;
-    border-radius: 1em;
   }

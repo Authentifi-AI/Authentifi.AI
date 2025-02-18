@@ -19,11 +19,6 @@ export default function Hero() {
                     <p class="second-paragraph">Stay in control of your work while using AI</p>
                     <button>Register</button>
                     <p class="third-paragraph">Be among the first to experience it!</p>
-
-                    {/* <div class='hero-card'>
-                        <h2>Students and Researchers Powering Authentifi Deep Authentic Engine</h2>
-                        <p>Transform your research experience with our innovativeblockchain and authenticity system</p>
-                    </div> */}
                 </motion.div>
 
                 <motion.div 
