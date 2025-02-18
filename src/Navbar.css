@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 1em 1em 1em 1em;
+    background-color: #2c1b47;
     position: fixed;
+    padding-left: 1em;
     width: 100%;
     top: 0;
     z-index: 1000;
