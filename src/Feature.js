@@ -1,5 +1,6 @@
 import "./Feature.css"
 import { motion } from "motion/react"
+import { useMediaQuery } from 'react-responsive'
 
 import { ReactComponent as Featureicon1 } from './feature-icon1.svg'
 import { ReactComponent as Featureicon2 } from './feature-icon2.svg'
@@ -9,7 +10,6 @@ import { ReactComponent as Featureicon3 } from './feature-icon3.svg'
 
 
 export default function Feature() {
-    const style = {}
     return (
         <>
             <motion.section
