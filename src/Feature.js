@@ -10,12 +10,32 @@ import { ReactComponent as Featureicon3 } from './feature-icon3.svg'
 
 
 export default function Feature() {
+
+    var sectionVariants = {};
+    // check the screen size and set variables accordingly
+    if (useMediaQuery({ query: '(min-width: 1025px)' })) {
+        sectionVariants = {
+            initial: { opacity: 0, x: -50 },
+            whileInView: { opacity: 1, x: 0, transition: { delay: 0.2, duration: 0.4 } },
+            viewport: { once: false, amount: 0.7 }
+        };
+    }
+
+    else{
+
+        sectionVariants = {
+            initial: { opacity: 0, x: -50 },
+            whileInView: { opacity: 1, x: 0, transition: { delay: 0.2, duration: 0.4 } },
+            viewport: { once: false, amount: 0.2 }
+        };
+    }
+
     return (
         <>
             <motion.section
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0, transition: { delay: 0.2, duration: 0.6 } }}
-                viewport={{ once: false, amount: 0.7 }}
+                initial={sectionVariants.initial}
+                whileInView={sectionVariants.whileInView}
+                viewport={sectionVariants.viewport}
                 class="feature-section">
 
                 <div class="feature-cards-row">
