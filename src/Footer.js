@@ -11,9 +11,9 @@ export default function Footer() {
                     </div>
 
                     <div class="right-side-footer">
-                        <a href="#" class="a-footer">Privacy Policy</a>
-                        <a href="#" class="a-footer">Terms of Service</a>
-                        <a href="#" class="a-footer">Contact Us</a>
+                        <a href="/" class="a-footer">Privacy Policy</a>
+                        <a href="/" class="a-footer">Terms of Service</a>
+                        <a href="/" class="a-footer">Contact Us</a>
                     </div>
                 </div>
 

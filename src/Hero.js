@@ -1,6 +1,5 @@
 import './Hero.css'
 import { motion } from "motion/react"
-import { ReactComponent as FolderSVG } from './feature-icon2.svg'
 import { useMediaQuery } from 'react-responsive'
 
 

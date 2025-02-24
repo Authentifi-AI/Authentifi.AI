@@ -2,10 +2,6 @@ import "./Feature.css"
 import { motion } from "motion/react"
 import { useMediaQuery } from 'react-responsive'
 
-import { ReactComponent as Featureicon1 } from './feature-icon1.svg'
-import { ReactComponent as Featureicon2 } from './feature-icon2.svg'
-import { ReactComponent as Featureicon3 } from './feature-icon3.svg'
-
 
 
 
@@ -41,17 +37,17 @@ export default function Feature() {
                 <div class="feature-cards-row">
 
                     <div class='feature-card'>
-                        <img src="./work.gif" />
+                        <img src="./work.gif" alt="Work gif"/>
                         <h2>Choose your favorite AI platform and begin working</h2>
                     </div>
 
                     <div class='feature-card'>
-                        <img src="./folder.gif" />
+                        <img src="./folder.gif" alt="Folder gif"/>
                         <h2>Record your progress in real time, tracking progress and sources</h2>
                     </div>
 
                     <div class='feature-card'>
-                        <img src="./certificate.gif" />
+                        <img src="./certificate.gif" alt="Certificate gif"/>
                         <h2>Publish your work with confidence</h2>
                     </div>
 
