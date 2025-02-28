@@ -21,5 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run build
+      - name: initialize git to the pages repositiry
+        run: git remote set-url origin https://github.com/Authentifi-AI/Pages.git
+
+      - name: Run gh-pages deploy
         run: npm run build
