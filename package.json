@@ -5,6 +5,7 @@
   "private": false,
   "dependencies": {
     "cra-template": "1.2.0",
+    "firebase": "^11.4.0",
     "motion": "^12.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
