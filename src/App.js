@@ -1,7 +1,7 @@
-import Navbar from './Navbar';
-import Hero from './Hero';
-import Feature from './Feature';
-import Footer from './Footer';
+
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import HomePage from "./HomePage/HomePage";
+import LoginPage from "./LoginPage/Login";
 
 
 
@@ -9,11 +9,11 @@ import Footer from './Footer';
 export default function App() {
 
     return (
-        <>
-            <Navbar />
-            <Hero />
-            <Feature />
-            <Footer />
-        </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="Login" element={<LoginPage />} />
+            </Routes>
+        </Router >
     )
 }
