@@ -1,6 +1,7 @@
 import './Hero.css'
 import { motion } from "motion/react"
 import { useMediaQuery } from 'react-responsive'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Hero() {

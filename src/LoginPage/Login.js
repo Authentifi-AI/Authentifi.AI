@@ -35,7 +35,7 @@ function LoginPage() {
       <Navbar></Navbar>
       <div id="LeftSideContainer">
         <h3>Start your journey</h3>
-        <h2>Sign in to to AuthentifiAI</h2>
+        <h2>Sign in to AuthentifiAI</h2>
         <form id="LoginForm" onSubmit={handleLogin}>
         {error && <p style={styles.error}>{error}</p>}
         {success && <p style={styles.success}>{success}</p>}

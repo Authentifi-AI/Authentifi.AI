@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    text-align: center;
+    background: radial-gradient(#d85aa8, #9c75de);
+    color: white;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+#RightSideContainer {
+    background-color: white;
+    height: 75vh;
+    width: 65vw;
+    padding-top: 25vh;
+    margin-right: 0;
+    margin-left: 35vw;
+}
+
+h3 {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+h2 {
+    color: black;
+    margin-top: -2vh;
+}
+
+h4 {
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+
+}
+
+#RegisterForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    color: #777;
+}
+
+.RegisterInput {
+    border: 1px, solid, #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    padding: 1vh 1vw 1vh 1vw;
+    width: 20vw;
+    transition-property: border;
+    transition-duration: 0.1s;
+}
+
+button {
+    border: 1px, solid, #ccc;
+    border-radius: 5px;
+    margin-top: 3vh;
+    height: 6vh;
+    width: 14vw;
+    font-size: large;
+    font-weight: bold;
+    background-color: white;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+button:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+.RegisterInput:hover {
+    border: 1.5px, solid, black;
+    cursor: pointer;
+}
+
+h5{
+    color: #777;
+    position: relative;
+}
