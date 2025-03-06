@@ -1,53 +1,49 @@
-body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'Poppins', 'Nunito', sans-serif;
-    text-align: center;
-    background: radial-gradient(#d85aa8, #9c75de);
-    color: white;
-    overflow-x: hidden;
+#Login-page{
+    height: 100vh;
+    width: 100vw;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
-}
-
-#LeftSideContainer {
+#Login-page #FormContainer {
     background-color: white;
-    height: 75vh;
-    width: 65vw;
-    padding-top: 25vh;
+    padding: 1vw 1vh 1vw 1vh;
+    width: fit-content;
+    padding: 10vh 5vw 10vh 5vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    border: 1px, solid, #ccc;
 }
 
-h3 {
+#Login-page h3 {
     color: rgba(0, 0, 0, 0.75);
 }
 
-h2 {
+#Login-page h2 {
     color: black;
     margin-top: -2vh;
 }
 
-h4 {
+#Login-page h4 {
     color: rgba(0, 0, 0, 0.6);
     margin-bottom: 0;
 
 }
 
-#LoginForm {
+#Login-page #LoginForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-svg {
+#Login-page svg {
     color: #777;
 }
 
-.LoginInput {
+#Login-page .LoginInput {
     border: 1px, solid, #ccc;
     border-radius: 5px;
     outline: none;
@@ -58,7 +54,7 @@ svg {
     transition-duration: 0.1s;
 }
 
-button {
+#Login-page button {
     border: 1px, solid, #ccc;
     border-radius: 5px;
     margin-top: 3vh;
@@ -71,17 +67,17 @@ button {
     transition-duration: 0.2s;
 }
 
-button:hover{
+#Login-page button:hover {
     background-color: green;
     cursor: pointer;
 }
 
-.LoginInput:hover {
+#Login-page .LoginInput:hover {
     border: 1.5px, solid, black;
     cursor: pointer;
 }
 
-h5{
+#Login-page h5 {
     color: #777;
     position: absolute;
     bottom: 1vh;

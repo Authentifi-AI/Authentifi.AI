@@ -33,7 +33,7 @@ function RegisterPage() {
   return (
     <>
       <Navbar></Navbar>
-      <div id="RightSideContainer">
+      <div id="FormContainer">
         <h3>Start your journey</h3>
         <h2>Register to AuthentifiAI</h2>
         <form id="RegisterForm" onSubmit={handleRegister}>
