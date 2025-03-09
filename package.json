@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@tailwindcss/cli": "^4.0.12",
     "cra-template": "1.2.0",
     "firebase": "^11.4.0",
     "lucide-react": "^0.477.0",
@@ -15,7 +16,8 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": 
+    "concurrently --kill-others \"react-scripts start\" \"npx @tailwindcss/cli -i ./src/index.css -o ./public/output.css --watch\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -41,9 +43,7 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "gh-pages": "^6.3.0",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.10"
+    "concurrently": "^9.1.2",
+    "gh-pages": "^6.3.0"
   }
 }

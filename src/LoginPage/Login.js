@@ -23,8 +23,9 @@ function LoginPage() {
     setSuccess(""); // Clear previous success messages
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      var login = await signInWithEmailAndPassword(auth, email, password);
       setSuccess("Signed in successfully!");
+      console.log(login);
     } catch (error) {
       setError(error.message);
     }

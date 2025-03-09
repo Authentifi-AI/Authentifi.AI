@@ -23,7 +23,7 @@ function RegisterPage() {
     
         try {
           await createUserWithEmailAndPassword(auth, email, password);
-          setSuccess("Signed in successfully!");
+          setSuccess("Registered successfully!");
         } catch (error) {
           setError(error.message);
         }
