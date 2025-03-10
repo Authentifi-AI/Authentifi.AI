@@ -1,0 +1,163 @@
+@media (min-width: 1025px) {
+  #Home-page .hero {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #Home-page .Left-section {
+    margin-left: -7vh;
+  }
+
+  #Home-page .Left-section h1 {
+    font-size: 10vh;
+    font-weight: lighter;
+  }
+
+  #Home-page .row {
+    display: inline-flex;
+    margin-top: -11vh;
+  }
+
+  #Home-page .row img {
+    width: 25vh;
+    height: auto;
+    margin-top: 0vh;
+    margin-right: -3vh;
+  }
+
+  #Home-page .row p {
+    text-align: left;
+    font-size: 5vh;
+    color: rgba(255, 255, 255, 0.675);
+  }
+
+  #Home-page .Right-section {
+    padding-right: 20vh;
+  }
+
+  #Home-page .second-paragraph {
+    font-size: 3.5vh;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 20vh;
+  }
+
+  #Home-page .hero button {
+    background-color: cornflowerblue;
+    border-radius: 2vh;
+    font-size: 3vh;
+    font-weight: bolder;
+    color: white;
+    padding: 1vh 3vh 1vh 3vh;
+    box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.2);
+    margin-left: 10vh;
+  }
+
+  #Home-page .hero button:hover {
+    background-color: green;
+  }
+
+  #Home-page .third-paragraph {
+    color: yellow;
+    font-size: 3.5vh;
+    margin-left: 15vh;
+  }
+
+  #Home-page .Right-section h2 {
+    font-size: 4vh;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: -27vh;
+  }
+
+  #Home-page video {
+    height: 50vh;
+    width: auto;
+    border-radius: 2vh;
+    margin-right: -15vh;
+  }
+}
+
+@media (max-width: 1025px) {
+  #Home-page .hero {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15vh;
+  }
+
+  #Home-page .Left-section {
+    height: 100vh;
+  }
+
+
+  #Home-page .Left-section h1 {
+    font-size: 12vw;
+    font-weight: lighter;
+  }
+
+  #Home-page .row {
+    display: inline-flex;
+    margin-top: -8vh;
+    margin-left: -5vh;
+  }
+
+  #Home-page .row img {
+    height: auto;
+    width: 30vw;
+    margin-right: -5vw;
+  }
+
+  #Home-page .row p {
+    text-align: left;
+    font-size: 5vw;
+    color: rgba(255, 255, 255, 0.675);
+  }
+
+  #Home-page .second-paragraph {
+    font-size: 4vw;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  #Home-page .hero button {
+    background-color: cornflowerblue;
+    border-radius: 2vh;
+    font-size: 5vw;
+    font-weight: bolder;
+    color: white;
+    padding: 1vh 3vh 1vh 3vh;
+    box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.2);
+  }
+
+  #Home-page .hero button:hover {
+    background-color: green;
+  }
+
+  #Home-page .third-paragraph {
+    color: yellow;
+    font-size: 7vw;
+  }
+
+  #Home-page .Right-section {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 33vh;
+  }
+
+  #Home-page .Right-section h2 {
+    font-size: 4vw;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: -27vw;
+  }
+
+  #Home-page video {
+    height: 50vw;
+    width: auto;
+    border-radius: 2.5vw;
+  }
+
+}

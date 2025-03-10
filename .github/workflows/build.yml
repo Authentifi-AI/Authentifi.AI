@@ -1,0 +1,28 @@
+name: Build on Commit
+
+on:
+  push:
+    branches: 
+      - LandingPageDesign
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22  # Change to your project's Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: initialize git to the pages repositiry
+        run: git remote set-url origin https://github.com/Authentifi-AI/Pages.git
+
+      - name: Run gh-pages deploy
+        run: npm run deploy

@@ -1,0 +1,92 @@
+@media (min-width: 1025px) {
+
+  .Footer-section {
+    background-color: #2c1b47;
+    display: flow-root;
+  }
+
+  .row-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left-side-footer {
+    text-align: start;
+    padding-left: 2vh;
+  }
+
+  .right-side-footer {
+    padding-right: 2vh;
+  }
+
+  .h1-footer {
+    font-size: 3vh;
+  }
+
+  .h2-footer {
+    font-size: 1.75vh;
+    margin-top: -2.5vh;
+    color: #ccc;
+  }
+
+  .a-footer {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.75;
+    margin-left: 1.5vh;
+  }
+
+  .h3-footer {
+    margin-top: -1.25vh;
+    font-size: 1.5vh;
+  }
+
+}
+
+@media (max-width: 1025px) {
+
+  .Footer-section {
+    background-color: #2c1b47;
+    display: flow-root;
+    width: 100%;
+  }
+
+  .row-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left-side-footer {
+    text-align: start;
+    padding-left: 2vw;
+  }
+
+  .right-side-footer {
+    padding-right: 2vw;
+  }
+
+  .h1-footer {
+    font-size: 3vw;
+  }
+
+  .h2-footer {
+    font-size: 1.75vw;
+    margin-top: -1vh;
+    color: #ccc;
+  }
+
+  .a-footer {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.75vw;
+    margin-left: 1.5vw;
+  }
+
+  .h3-footer {
+    font-size: 1.5vw;
+    margin-bottom: 2.5vh;
+  }
+
+}
