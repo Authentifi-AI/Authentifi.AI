@@ -13,13 +13,13 @@ export default function Hero() {
         RightsectionVariants = {
             initial: { opacity: 0, x: -75 },
             whileInView: { opacity: 1, x: 0, transition: { delay: 0.2, duration: 0.4 } },
-            viewport: { once: true, amount: 0.1 }
+            viewport: { once: false, amount: 0.1 }
         };
 
         LeftsectionVariants = {
             initial: { opacity: 0, x: 75 },
             whileInView: { opacity: 1, x: 0, transition: { delay: 0.2, duration: 0.4 } },
-            viewport: { once: true, amount: 0.7 }
+            viewport: { once: false, amount: 0.7 }
         }
     }
 
@@ -28,7 +28,7 @@ export default function Hero() {
         LeftsectionVariants = {
             initial: { opacity: 0, x: 75 },
             whileInView: { opacity: 1, x: 0, transition: { delay: 0.1, duration: 0.25 } },
-            viewport: { once: true }
+            viewport: { once: false }
 
         }
     }
