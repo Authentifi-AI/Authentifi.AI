@@ -7,9 +7,9 @@ import Navbar from '../Public/Navbar';
 function HomePage() {
     return <>
         <Navbar />
-        <Hero />
+        {/* <Hero />
         <Feature />
-        <Footer />
+        <Footer /> */}
     </>
 }
 
