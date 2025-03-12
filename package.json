@@ -16,8 +16,7 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": 
-    "concurrently --kill-others \"react-scripts start\" \"npx @tailwindcss/cli -i ./src/index.css -o ./public/output.css --watch\"",
+    "start": "concurrently --kill-others \"react-scripts start\" \"npx @tailwindcss/cli -i ./src/index.css -o ./public/output.css --watch\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -43,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
     "concurrently": "^9.1.2",
     "gh-pages": "^6.3.0"
   }
