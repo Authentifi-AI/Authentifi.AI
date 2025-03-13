@@ -35,18 +35,15 @@ function LoginPage() {
   return (
     <>
       <Navbar></Navbar>
-      <div
-        id="FormContainer">
-        <h3>Start your journey</h3>
-        <h2>Sign in to AuthentifiAI</h2>
-        <form id="LoginForm" onSubmit={handleLogin}>
+      <div id="FormContainer" className="bg-white w-fit fixed rounded-xl border-gray-300 border-1 pt-5 pl-5 pr-5 pb-1 text-center">
+        <h3 className="text-gray-900 text-sm">Start your journey</h3>
+        <h2 className="text-black text-xl font-semibold mt-2">Sign in to AuthentifiAI</h2>
+        <form className="flex flex-col justify-center items-center mt-15" onSubmit={handleLogin}>
           {error && <p style={styles.error}>{error}</p>}
           {success && <p style={styles.success}>{success}</p>}
-          <h4> Email </h4>
           {/* This is a div that wraps the email input field so i can integrate the email icon into the field itself */}
-          <div style={{ position: "relative", display: "flex", alignItems: "center" }}>
-            <input id="LoginEmailField"
-              className="LoginInput"
+          <div className=" relative flex items-center">
+            <input className="LoginInput border-1 rounded-sm text-lg p-2"
               type="email"
               placeholder="Enter your email"
               required
@@ -57,27 +54,25 @@ function LoginPage() {
               onChange={(e) => {
                 setEmail(e.target.value);
               }} />
-            <Mail size={20} style={{ position: "absolute", right: "10px", color: "#777" }} />
+            <Mail size={20} className="absolute right-3 text-gray-600" />
           </div>
 
-          <h4> Password </h4>
           {/* This is a div that wraps the password input field so i can integrate the eye icon into the field itself */}
-          <div style={{ position: "relative", display: "flex", alignItems: "center" }}>
-            <input id="LoginPasswordField"
-              className="LoginInput"
+          <div className=" relative flex items-center mt-5">
+            <input className="LoginInput border-1 rounded-sm text-lg p-2"
               type="password"
               placeholder="Enter your password"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
               }} />
-            <Eye size={20} style={{ position: "absolute", right: "10px", color: "#777" }} />
+            <Eye size={20} className="absolute right-3 text-gray-600" />
           </div>
 
-          <button type="submit">Login</button>
+          <button type="submit" className="mt-10 h-12 w-24 text-lg font-bold bg-white">Login</button>
         </form>
 
-        <h5>Dont have an account? <a href="/Register">Register</a></h5>
+        <h5 className="text-gray-500 text-left text-sm mt-10 -ml-3">Dont have an account? <a href="/Register">Register</a></h5>
       </div>
     </>
   );
