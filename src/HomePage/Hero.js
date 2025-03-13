@@ -39,13 +39,13 @@ export default function Hero() {
         <>
               
         
-            <section class="grid text-center">
+            <section class="grid text-center md:grid-cols-2 md:h-screen md:pb-30 md:mb-30">
                 <motion.div
                     initial={RightsectionVariants.initial}
                     whileInView={RightsectionVariants.whileInView}
                     viewport={RightsectionVariants.viewport}
                     className='content-center pt-30'>
-                    <h1 className='text-5xl text-white font-light'>Authentifi AI</h1>
+                    <h1 className='text-5xl text-white font-light lg:text-7xl xl:text-8xl xl:font-medium 2xl:text-9xl'>Authentifi AI</h1>
                     <div className='inline-flex mt-2'>
                         <img src="logo.png" alt="Company Logo" className='h-auto w-16' />
                         <p class='text-xl text-gray-200 text-left'>AI-powered authorship <br></br>verification</p>
@@ -59,9 +59,9 @@ export default function Hero() {
                     initial={LeftsectionVariants.initial}
                     whileInView={LeftsectionVariants.whileInView}
                     viewport={LeftsectionVariants.viewport}
-                    class="text-left p-5 h-screen content-center">
-                    <h2 className='text-gray-200 text-2xl'>Meet our student lucy...</h2>
-                    <video controls className='rounded-xl bg-white h-auto w-max'>
+                    class="text-left p-5 h-screen content-center md:h-auto xl:justify-items-center">
+                    <h2 className='text-gray-200 text-2xl xl:text-4xl xl:mb-3'>Meet our student lucy...</h2>
+                    <video controls className='rounded-xl bg-white h-auto w-max xl:h-8/12'>
                         <source src="HeroLandingPageVideo.mp4" type="video/mp4" />
                     </video>
                 </motion.div>

@@ -27,9 +27,9 @@ function Card({ img_src, img_alt, text_value }) {
         initial={sectionVariants.initial}
         whileInView={sectionVariants.whileInView}
         viewport={sectionVariants.viewport}
-         className="bg-white border-1 rounded-2xl text-left pt-2 pl-5 pr-5 pb-5 mb-5">
-            <img src={img_src} alt={img_alt} className="w-auto h-20" />
-            <h2 className='text-black font-bold text-lg mt-5'>{text_value} </h2>
+         className="bg-white border-1 rounded-2xl text-left pt-2 pl-5 pr-5 pb-5 mb-5 lg:mr-7 lg:ml-7">
+            <img src={img_src} alt={img_alt} className="w-auto h-20 2xl:h-30" />
+            <h2 className='text-black font-bold text-lg 2xl:text-2xl mt-5 2xl:mt-10'>{text_value} </h2>
         </motion.div>
     );
 }
@@ -42,19 +42,16 @@ export default function Feature() {
     return (
         <>
             <section
-
-                className="grid pr-5 pl-5 pb-30">
-
+                className="grid pr-5 pl-5 pb-30 lg:grid-cols-3 lg:pr-0 lg:pl-0 lg:w-full justify-center lg:pb-96">
                 <Card img_src="./work.gif" img_alt="Work gif" text_value="Choose your favorite AI platform and begin working"></Card>
                 <Card img_src="./folder.gif" img_alt="Folder gif" text_value="Record your progress in real time, tracking progress and sources"></Card>
                 <Card img_src="./certificate.gif" img_alt="Certificate gif" text_value="Publish your work with confidence"></Card>
-
 
                 <motion.p 
                 initial={{opacity: 0.33}}
                 whileInView={{opacity: 1, transition: { delay: 0.1, duration: 0.2 } }}
                 viewport={{ once: true, amount: 0.2 }}
-                className="text-lg text-center font-bold text-gray-100">
+                className="text-lg text-center font-bold text-gray-100 lg:col-span-3 2xl:text-2xl">
                     "Verify your authorship while working with AI to prove your contributions and authenticity."
                 </motion.p>
 

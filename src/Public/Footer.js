@@ -1,7 +1,7 @@
 function Link({link, text})
 {
     return(
-        <a href={link} className="text-xs mr-2">{text}</a>
+        <a href={link} className="text-xs mr-2 xl:text-sm">{text}</a>
     );
 }
 
@@ -11,7 +11,7 @@ export default function Footer() {
         <>
             <section className="bg-blue-950 grid grid-cols-4 text-white pt-2 pl-2 pr-1 pb-5">
                 
-                    <h1 class="text-lg col-span-1">Authentifi</h1>
+                    <h1 class="text-lg col-span-1 xl:text-2xl">Authentifi</h1>
 
                     <div class="col-span-3 text-right">
                         <Link link="/" text="Privacy Policy"></Link>
