@@ -1,15 +1,19 @@
-#Login-page{
-    height: 100vh;
-    width: 100vw;
-    /* overflow-y: hidden; */
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-#Login-page #FormContainer {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+#Login-page{
+    height: 100%;
+    margin: 0;
 }
+
+#Login-page #root{
+    display: flex;
+    flex-direction: column;
+    height: 100%
+};
 
 #Login-page .LoginInput {
     outline: none;
@@ -33,43 +37,3 @@
     background-color: green;
     cursor: pointer;
 }
-
-/* 
-#Login-page h3 {
-    color: rgba(0, 0, 0, 0.75);
-}
-
-#Login-page h2 {
-    color: black;
-    margin-top: -2vh;
-}
-
-#Login-page h4 {
-    color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 0;
-
-}
-
-#Login-page #LoginForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#Login-page svg {
-    color: #777;
-}
-
-
-
-
-
-
-
-#Login-page h5 {
-    color: #777;
-    position: absolute;
-    bottom: 1vh;
-    left: 0.6vw;
-} */
