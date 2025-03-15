@@ -7,8 +7,8 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className="navbar bg-blue-950 flex items-center pl-1 w-full z-50 ">
-        <img src='logo.png' alt='Logo png' className='w-20 h-auto -ml-3 -mr-3 pt-3'></img>
+      <nav className="navbar bg-blue-950 flex items-center w-full z-50 p-3">
+        <img src='logo.png' alt='Logo png' className='w-7 h-auto mr-5'></img>
         <Item value={"AuthentifiAI"} Link={"/"}></Item>
         <Item value={"Login"} Link={"Login"}></Item>
         <Item value={"Register"} Link={"Register"}></Item>
