@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### Push to gh-pages:
+git remote set-url origin https://github.com/Authentifi-AI/Pages.git
+npm run deploy
+git remote set-url origin https://github.com/Authentifi-AI/Authentifi.AI.git

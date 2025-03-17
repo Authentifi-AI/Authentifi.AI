@@ -1,76 +1,24 @@
-#Register-page
-{
-    height: 100vh;
-    width: 100vw;
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-#Register-page #FormContainer {
-    background-color: white;
-    padding: 1vw 1vh 1vw 1vh;
-    width: fit-content;
-    padding: 10vh 5vw 10vh 5vw;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    border: 1px, solid, #ccc;
+#Register-page{
+    height: 100%;
+    margin: 0;
 }
 
-#Register-page h3 {
-    color: rgba(0, 0, 0, 0.75);
-}
-
-#Register-page h2 {
-    color: black;
-    margin-top: -2vh;
-}
-
-#Register-page h4 {
-    color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 0;
-
-}
-
-#Register-page #RegisterForm {
+#Register-page #root{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#Register-page svg {
-    color: #777;
-}
+    height: 100%
+};
 
 #Register-page .RegisterInput {
-    border: 1px, solid, #ccc;
-    border-radius: 5px;
     outline: none;
-    font-size: 14px;
-    padding: 1vh 1vw 1vh 1vw;
-    width: 20vw;
     transition-property: border;
     transition-duration: 0.1s;
-}
-
-#Register-page button {
-    border: 1px, solid, #ccc;
-    border-radius: 5px;
-    margin-top: 3vh;
-    height: 6vh;
-    width: 14vw;
-    font-size: large;
-    font-weight: bold;
-    background-color: white;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-}
-
-#Register-page button:hover{
-    background-color: green;
-    cursor: pointer;
 }
 
 #Register-page .RegisterInput:hover {
@@ -78,9 +26,14 @@
     cursor: pointer;
 }
 
-#Register-page h5{
-    color: #777;
-    position: absolute;
-    bottom: 1vh;
-    left: 0.6vw;
+#Register-page button {
+    border: 1px, solid, black;
+    border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+#Register-page button:hover {
+    background-color: green;
+    cursor: pointer;
 }
