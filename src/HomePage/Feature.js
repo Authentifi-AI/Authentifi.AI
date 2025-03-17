@@ -43,9 +43,9 @@ export default function Feature() {
         <>
             <section
                 className="grid pr-5 pl-5 pb-30 lg:grid-cols-3 lg:pr-0 lg:pl-0 lg:w-full justify-center lg:pb-96">
-                <Card img_src="./work.gif" img_alt="Work gif" text_value="Choose your favorite AI platform and begin working"></Card>
-                <Card img_src="./folder.gif" img_alt="Folder gif" text_value="Record your progress in real time, tracking progress and sources"></Card>
-                <Card img_src="./certificate.gif" img_alt="Certificate gif" text_value="Publish your work with confidence"></Card>
+                <Card img_src="./create.png" img_alt="create icon" text_value="Choose your favorite AI platform and begin working"></Card>
+                <Card img_src="./record.png" img_alt="record icon" text_value="Record your progress in real time, tracking progress and sources"></Card>
+                <Card img_src="./own.png" img_alt="own icon" text_value="Publish your work with confidence"></Card>
 
                 <motion.p 
                 initial={{opacity: 0.33}}
