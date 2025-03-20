@@ -3,7 +3,7 @@ name: Build on Commit
 on:
   push:
     branches: 
-      - LandingPageDesign
+      - main
 
 jobs:
   build:
@@ -21,8 +21,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: initialize git to the pages repositiry
-        run: git remote set-url origin https://github.com/Authentifi-AI/Pages.git
+        run: git remote set-url origin https://x-access-token:${{ secrets.TARGET_REPO_PAT }}@github.com/Authentifi-AI/Pages.git
 
       - name: Run gh-pages deploy
         run: npm run deploy
