@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth"; // For authentication
 import { getFirestore } from "firebase/firestore"; // For Firestore Database
 import { getStorage } from "firebase/storage"; // For File Storage
