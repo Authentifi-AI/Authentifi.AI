@@ -1,5 +1,4 @@
 import { motion } from "motion/react"
-import { div } from 'motion/react-client';
 import { useMediaQuery } from 'react-responsive'
 import { useState } from 'react';
 import { addDoc, collection } from "firebase/firestore";

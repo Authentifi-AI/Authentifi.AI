@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './Login.css'
 import Navbar from "../Public/Navbar";
-import Footer from "../Public/Footer";
 import { Mail } from "lucide-react";
 import { Eye } from "lucide-react"
 import { auth } from "../Firebase";
