@@ -71,7 +71,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-### Push to gh-pages:
-git remote set-url origin https://github.com/Authentifi-AI/Pages.git \
-npm run deploy \
-git remote set-url origin https://github.com/Authentifi-AI/Authentifi.AI.git \ 
+### Push to test-domain:
+make sure the homepage attribute in the package.json file is set to: "https://test.authentifi.ai"
+git remote set-url origin https://github.com/Authentifi-AI/Pages.git
+npm run deploy
+git remote set-url origin https://github.com/Authentifi-AI/Authentifi.AI.git
+
+
+### Push to main-domain:
+make sure the homepage attribute in the package.json file is set to: "https://authentifi.ai"
+git remote set-url origin https://github.com/Authentifi-AI/Pages-Main-Domain.git
+npm run deploy
+git remote set-url origin https://github.com/Authentifi-AI/Authentifi.AI.git
