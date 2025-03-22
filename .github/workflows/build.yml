@@ -27,7 +27,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: initialize git to the pages repositiry
-        run: git remote set-url origin https://x-access-token:${{ secrets.TARGET_REPO_PAT }}@github.com/Authentifi-AI/Pages.git
+        run: git remote set-url origin https://x-access-token:${{ secrets.TARGET_REPO_PAT }}@github.com/Authentifi-AI/Pages-Test-Domain.git
 
       - name: Run gh-pages deploy
         run: npm run deploy
