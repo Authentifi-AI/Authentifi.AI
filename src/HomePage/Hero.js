@@ -84,7 +84,7 @@ export default function Hero() {
                         <img src="logo.png" alt="Company Logo" className='h-auto w-15 2xl:w-20' />
                         <h1 className='text-5xl text-white font-bold lg:text-6xl lg:ml-2 2xl:text-8xl'>Authentifi AI</h1>
                     </div>
-                    <p className='text-xl lg:text-3xl text-center lg:text-left text-blue-900 font-bold lg:mt-5 2xl:text-4xl 2xl:mt-10'>AI Authership Authentication and Verification</p>
+                    <p className='text-xl lg:text-3xl text-center lg:text-left text-blue-900 font-bold lg:mt-5 2xl:text-4xl 2xl:mt-10'>AI Authorship Authentication and Verification</p>
                     <p className="text-lg font-semibold text-blue-900 mt-10 pl-5 pr-5 italic lg:pl-0 lg:text-3xl lg:mt-15 2xl:mt-30">Use AI with confidence, record your work in real time, and publish with ease.</p>
 
                     <div className="flex justify-center w-full">
