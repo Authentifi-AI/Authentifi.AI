@@ -92,7 +92,7 @@ export default function Hero() {
                     <div className="flex justify-center w-full">
                         <div className="bg-gray-100 w-fit p-4 rounded-2xl border-gray-900 border mt-5 lg:mt-15 2xl:mt-32 justify-items-center lg:p-7">
                             {/* Removed text-black */}
-                            <p style={{color: '#273B96'}} className="text-3xl font-bold md:text-center lg:justify-self-center lg:text-4xl 2xl:text-5xl">Sign up early for free stuff</p>
+                            <p style={{color: '#273B96'}} className="text-3xl font-bold md:text-center lg:justify-self-center lg:text-4xl 2xl:text-5xl">Sign up early for free</p>
                             <button onClick={togglePopup} className='bg-blue-400 rounded-xl text-xl text-white font-bold pt-2 pb-2 pr-4 pl-4 shadow-xl border-1 border-gray-600 hover:bg-green-700 hover:cursor-pointer mt-5 lg:text-2xl 2xl:text-3xl'>Register</button>
                         </div>
                     </div>
