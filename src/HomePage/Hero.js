@@ -85,14 +85,14 @@ export default function Hero() {
                         <h1 className='text-5xl text-white font-bold lg:text-6xl lg:ml-2 2xl:text-8xl'>Authentifi AI</h1>
                     </div>
                     {/* removed: text-blue-900 */}
-                    <p className='text-xl lg:text-3xl text-center lg:text-left text-[#5E17EB] font-bold lg:mt-5 2xl:text-4xl 2xl:mt-10'>AI Authorship Verification</p> 
+                    <p style={{color: '#5E17EB'}} className='text-xl lg:text-3xl text-center lg:text-left font-bold lg:mt-5 2xl:text-4xl 2xl:mt-10'>AI Authorship Verification</p> 
                     <p className="text-lg font-semibold text-white mt-10 pl-5 pr-5 italic lg:pl-0 lg:text-3xl lg:mt-15 2xl:mt-30">Use Authentifi AI to create your work, record your progress, and publish with confidence.</p>
 
                     <div className="flex justify-center w-full p-3 lg:p-0">
                     <div className="flex justify-center w-full">
                         <div className="bg-gray-100 w-fit p-4 rounded-2xl border-gray-900 border mt-5 lg:mt-15 2xl:mt-32 justify-items-center lg:p-7">
                             {/* Removed text-black */}
-                            <p className="text-3xl font-bold text-[#273B96] md:text-center lg:justify-self-center lg:text-4xl 2xl:text-5xl">Sign up early for free stuff</p>
+                            <p style={{color: '#273B96'}} className="text-3xl font-bold md:text-center lg:justify-self-center lg:text-4xl 2xl:text-5xl">Sign up early for free stuff</p>
                             <button onClick={togglePopup} className='bg-blue-400 rounded-xl text-xl text-white font-bold pt-2 pb-2 pr-4 pl-4 shadow-xl border-1 border-gray-600 hover:bg-green-700 hover:cursor-pointer mt-5 lg:text-2xl 2xl:text-3xl'>Register</button>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ export default function Hero() {
                     className="text-left p-5 h-screen content-center mt-10 mb-10 md:h-auto">
                     <h1 className='text-white text-3xl font-bold xl:text-4xl xl:mb-3'>See how it works &rarr;</h1>
                     {/* removed: text-blue-900 */}
-                    <h2 className='text-[#5E17EB] font-medium  text-2xl xl:text-4xl xl:mb-3'>Meet Alice, our student...</h2>
+                    <h2 style={{color: '#5E17EB'}} className='font-medium  text-2xl xl:text-4xl xl:mb-3'>Meet Alice, our student...</h2>
                     <video controls className='rounded-xl bg-white h-auto w-max xl:h-8/12'>
                         <source src="HeroLandingPageVideo.mp4" type="video/mp4" />
                     </video>
