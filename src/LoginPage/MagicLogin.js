@@ -1,37 +1,38 @@
 import React, { useState } from "react";
-import './Login.css'
+import './MagicLogin.css'
 import Navbar from "../Public/Navbar";
 import { Mail } from "lucide-react";
 import { Eye } from "lucide-react"
 import { auth } from "../Firebase";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { sendSignInLinkToEmail } from "firebase/auth";
 
 
-function LoginPage() {
+function MagicLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  const sendMagicLink = async (email) => {
+    const actionCodeSettings = {
+      url: "http://localhost:3000/finishSignIn", // redirect after click
+      handleCodeInApp: true,
+    };
+
+    try {
+      await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+      window.localStorage.setItem("emailForSignIn", email);
+      setSuccess("Magic link sent to your email!");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent form from refreshing the page
     setError(""); // Clear previous errors
     setSuccess(""); // Clear previous success messages
-
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-      if (user.emailVerified) {
-        setSuccess("Login successful!");
-      }
-      else {
-        setError("Please verify your email before logging in.");
-        await signOut(auth); // Prevent login until email is verified
-      }
-    }
-    catch (error) {
-      setError(error.message);
-    }
+    sendMagicLink(email)
   };
 
 
@@ -51,7 +52,7 @@ function LoginPage() {
                 type="email"
                 placeholder="Enter your email"
                 required
-                pattern="[a-zA-Z0-9.]+@+[a-zA-Z0-9.]+.edu"
+                // pattern="[a-zA-Z0-9.]+@+[a-zA-Z0-9.]+.edu"
                 onInvalid={(e) => e.target.setCustomValidity("Please enter a valid .edu email address.")}
                 onInput={(e) => e.target.setCustomValidity("")}
                 value={email}
@@ -61,21 +62,9 @@ function LoginPage() {
               <Mail size={20} className="absolute right-3 text-gray-600" />
             </div>
 
-            {/* This is a div that wraps the password input field so i can integrate the eye icon into the field itself */}
-            <div className=" relative flex items-center mt-5">
-              <input className="LoginInput border-1 rounded-sm text-md p-2 lg:text-lg 2xl:text-xl lg:w-xs 2xl:w-sm"
-                type="password"
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }} />
-              <Eye size={20} className="absolute right-3 text-gray-600" />
-            </div>
-
             <button type="submit" className="mt-10 h-12 w-24 text-lg font-bold bg-white lg:text-xl 2xl:text-2xl lg:mt-15 2xl:h-15 2xl:w-30">Login</button>
             <h5 className="text-sm mt-10 -ml-3 lg:text-base 2xl:text-lg">Dont have an account? <a href="/Register" className="underline text-blue-600">Register</a></h5>
-            <h5 className="text-sm mt-2 -ml-3 lg:text-base 2xl:text-lg">For Password less Sign In <a href="/MagicLogin" className="underline text-blue-600">Click here</a></h5>
+            <h5 className="text-sm mt-2 -ml-3 lg:text-base 2xl:text-lg">For Password Sign In <a href="/Login" className="underline text-blue-600">Click here</a></h5>
           </form>
         </div>
 
@@ -91,4 +80,4 @@ const styles = {
 };
 
 
-export default LoginPage;
+export default MagicLogin;
