@@ -68,25 +68,25 @@ export default function Hero() {
     //         viewport: { once: false }
 
     //     }
-    // }
+    // 
 
     return (
         <>
 
 
-            <section className="grid text-center md:grid-cols-2 md:h-screen md:pb-30 md:mb-30">
+            <section className="grid text-center md:grid-cols-2 md:h-screen md:pb-30 md:mb-30 lg:items-start">
                 <motion.div
                     initial={RightsectionVariants.initial}
                     whileInView={RightsectionVariants.whileInView}
                     viewport={RightsectionVariants.viewport}
-                    className='content-center pt-20 md:content-center md:pt-10 md:text-left justify-items-center lg:justify-items-start lg:pl-10 lg:text-left lg:content-baseline' >
+                    className='content-center pt-20 md:content-center md:pt-10 md:text-left justify-items-center lg:justify-items-start lg:pt-20 lg:pl-10 lg:text-left lg:content-baseline' >
                     <div className='inline-flex items-center text-left w-screen justify-center md:w-full md:justify-baseline '>
                         <img src="logo.png" alt="Company Logo" className='h-auto w-15 2xl:w-20' />
                         <h1 className='text-5xl text-white font-bold lg:text-6xl lg:ml-2 2xl:text-8xl'>Authentifi AI</h1>
                     </div>
                     {/* removed: text-blue-900 */}
-                    <p style={{color: '#5E17EB'}} className='text-xl lg:text-3xl text-center lg:text-left font-bold lg:mt-5 2xl:text-4xl 2xl:mt-10'>AI Authorship Verification</p> 
-                    <p className="text-lg font-semibold text-white mt-10 pl-5 pr-5 italic lg:pl-0 lg:text-3xl lg:mt-15 2xl:mt-30">Use Authentifi AI to create your work, record your progress, and publish with confidence.</p>
+                    <p style={{color: '#5E17EB'}} className='text-xl lg:text-3xl text-center lg:text-left lg:ml-2 font-bold 2xl:text-4xl 2xl:mt-2 '>AI Authorship Verification</p> 
+                    <p className="text-lg font-semibold text-white mt-10 pl-5 pr-5 lg:pl-0 lg:text-3xl lg:mt-15 2xl:mt-30">Use Authentifi AI to create your work, record your progress, and publish with confidence.</p>
 
                     <div className="flex justify-center w-full p-3 lg:p-0">
                     <div className="flex justify-center w-full">
@@ -103,11 +103,11 @@ export default function Hero() {
                     initial={LeftsectionVariants.initial}
                     whileInView={LeftsectionVariants.whileInView}
                     viewport={LeftsectionVariants.viewport}
-                    className="text-left p-5 h-screen content-center mt-10 mb-10 md:h-auto">
+                    className="text-left p-5 h-screen content-center mt-10 mb-10 md:h-auto lg:mt-0 lg:mb-0 lg:pt-20">
                     <h1 className='text-white text-3xl font-bold xl:text-4xl xl:mb-3'>See how it works &rarr;</h1>
                     {/* removed: text-blue-900 */}
-                    <h2 style={{color: '#5E17EB'}} className='font-medium  text-2xl xl:text-4xl xl:mb-3'>Meet Alice, our student...</h2>
-                    <video controls className='rounded-xl bg-white h-auto w-max xl:h-8/12'>
+                    <h2 style={{color: '#5E17EB'}} className='font-medium text-2xl xl:text-4xl xl:mb-3'>Meet Alice, our student...</h2>
+                    <video controls className='rounded-xl bg-white h-auto w-max 2xl:h-[37rem]'>
                         <source src="HeroLandingPageVideo.mp4" type="video/mp4" />
                     </video>
                 </motion.div>
