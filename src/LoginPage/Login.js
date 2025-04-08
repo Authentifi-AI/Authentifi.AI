@@ -51,7 +51,7 @@ function LoginPage() {
                 type="email"
                 placeholder="Enter your email"
                 required
-                pattern="[a-zA-Z0-9.]+@+[a-zA-Z0-9.]+.edu"
+                // pattern="[a-zA-Z0-9.]+@+[a-zA-Z0-9.]+.edu"
                 onInvalid={(e) => e.target.setCustomValidity("Please enter a valid .edu email address.")}
                 onInput={(e) => e.target.setCustomValidity("")}
                 value={email}

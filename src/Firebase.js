@@ -5,13 +5,13 @@ import { getFirestore } from "firebase/firestore"; // For Firestore Database
 import { getStorage } from "firebase/storage"; // For File Storage
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB0VY85DrxF9wkXWdrpf2MBi675JFh0CG4",
-  authDomain: "authentifi-ai.firebaseapp.com",
-  projectId: "authentifi-ai",
-  storageBucket: "authentifi-ai.firebasestorage.app",
-  messagingSenderId: "511695560513",
-  appId: "1:511695560513:web:a27ceb0e228c42738d8bc0",
-  measurementId: "G-XGJ5N3TYE0"
+  apiKey: "AIzaSyBFhrIWfEuxS-NiKkjbOj84LJWqZ_yul_s",
+  authDomain: "authentifiai-5d90a.firebaseapp.com",
+  projectId: "authentifiai-5d90a",
+  storageBucket: "authentifiai-5d90a.firebasestorage.app",
+  messagingSenderId: "958175657043",
+  appId: "1:958175657043:web:89a02e4dfce33ff6bfdaa6",
+  measurementId: "G-3TH9ZP1FMC"
 };
 
 const app = initializeApp(firebaseConfig);
