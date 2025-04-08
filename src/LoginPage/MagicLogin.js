@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import './MagicLogin.css'
 import Navbar from "../Public/Navbar";
 import { Mail } from "lucide-react";
-import { Eye } from "lucide-react"
 import { auth } from "../Firebase";
 import { sendSignInLinkToEmail } from "firebase/auth";
 
 
 function MagicLogin() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
