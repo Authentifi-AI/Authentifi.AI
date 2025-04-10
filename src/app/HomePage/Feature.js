@@ -1,3 +1,6 @@
+'use client'
+
+
 import { motion } from "motion/react"
 import { useMediaQuery } from 'react-responsive'
 

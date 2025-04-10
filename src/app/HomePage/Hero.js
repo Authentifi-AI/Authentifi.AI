@@ -1,8 +1,10 @@
+'use client'
+
 import { motion } from "motion/react"
 import { useMediaQuery } from 'react-responsive'
 import { useState } from 'react';
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../Firebase";
+import { db } from "../../Firebase";
 
 
 
