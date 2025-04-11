@@ -1,14 +1,33 @@
+'use client'
+
 import { useEffect, useState } from "react";
-import { auth } from "../Firebase";
-import { isSignInWithEmailLink, signInWithEmailLink } from "firebase/auth";
+import { auth } from "../../Firebase";
+import { isSignInWithEmailLink, signInWithEmailLink, User } from "firebase/auth";
+
+// Define a proper type for user info
+interface UserInfo {
+  email: string | null;
+  uid: string;
+  displayName: string | null;
+  emailVerified: boolean;
+}
 
 const FinishSignIn = () => {
-  const [userInfo, setUserInfo] = useState(null);
+  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
     const completeSignIn = async () => {
-      const storedEmail = window.localStorage.getItem("emailForSignIn") || window.prompt("Enter your email to confirm:");
+      // Handle case where email might be null
+      let storedEmail = window.localStorage.getItem("emailForSignIn");
+      
+      if (!storedEmail) {
+        storedEmail = window.prompt("Enter your email to confirm:");
+        if (!storedEmail) {
+          setError("Email is required to complete sign-in");
+          return;
+        }
+      }
 
       if (isSignInWithEmailLink(auth, window.location.href)) {
         try {
@@ -24,7 +43,9 @@ const FinishSignIn = () => {
           });
         } catch (err) {
           console.error("Sign-in failed:", err);
-          setError("Login failed: " + err.message);
+          // Handle error safely regardless of structure
+          const errorMessage = err instanceof Error ? err.message : "Unknown error occurred";
+          setError("Login failed: " + errorMessage);
         }
       }
     };
@@ -43,7 +64,7 @@ const FinishSignIn = () => {
   return (
     <div>
       <h2>Welcome!</h2>
-      <p><strong>Email:</strong> {userInfo.email}</p>
+      <p><strong>Email:</strong> {userInfo.email || "Not available"}</p>
       <p><strong>Email Verified:</strong> {userInfo.emailVerified ? "Yes" : "No"}</p>
     </div>
   );

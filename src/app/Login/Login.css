@@ -1,39 +1,34 @@
-html {
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-#Login-page{
-    height: 100%;
-    margin: 0;
-}
-
-#Login-page #root{
+#Login{
     display: flex;
     flex-direction: column;
     height: 100%
-};
+}
 
-#Login-page .LoginInput {
+#Login .LoginInput {
     outline: none;
     transition-property: border;
     transition-duration: 0.1s;
 }
 
-#Login-page .LoginInput:hover {
+#Login .LoginInput:hover {
     border: 1.5px, solid, black;
     cursor: pointer;
 }
 
-#Login-page button {
+#Login button {
     border: 1px, solid, black;
     border-radius: 5px;
     transition-property: background-color;
     transition-duration: 0.2s;
 }
 
-#Login-page button:hover {
+#Login button:hover {
     background-color: green;
     cursor: pointer;
 }
