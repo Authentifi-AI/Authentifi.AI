@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { auth } from "../../Firebase";
+import { auth } from "@/lib/Firebase";
 import { isSignInWithEmailLink, signInWithEmailLink, User } from "firebase/auth";
 
 // Define a proper type for user info

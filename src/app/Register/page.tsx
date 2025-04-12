@@ -5,7 +5,7 @@ import Navbar from "../Public/Navbar";
 import React, { useState } from "react";
 import { Mail } from "lucide-react";
 import { Eye } from "lucide-react"
-import { auth } from "../../Firebase";
+import { auth } from "@/lib/Firebase";
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import './Register.css'
 

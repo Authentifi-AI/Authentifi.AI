@@ -24,10 +24,10 @@ const app = initializeApp(firebaseConfig);
 // Export services for use in other files
 export const auth = getAuth(app);
 //Set the persistance of the user session to until the tab is closed
-setPersistence(auth, browserSessionPersistence)
-  .catch((error) => {
-    console.error("Error setting persistence:", error);
-  });
+// setPersistence(auth, browserSessionPersistence)
+//   .catch((error) => {
+//     console.error("Error setting persistence:", error);
+//   });
 export const db = getFirestore(app);
 export const storage = getStorage(app);
 

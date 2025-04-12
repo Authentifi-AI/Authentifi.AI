@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import './MagicLogin.css'
 import Navbar from "../Public/Navbar";
 import { Mail } from "lucide-react";
-import { auth } from "../../Firebase";
+import { auth } from "@/lib/Firebase";
 import { sendSignInLinkToEmail } from "firebase/auth";
 
 
