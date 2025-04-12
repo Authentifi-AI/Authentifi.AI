@@ -6,7 +6,23 @@ import Navbar from "../Public/Navbar";
 import { Mail } from "lucide-react";
 import { Eye } from "lucide-react"
 import { auth } from "../../Firebase";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { signInWithEmailAndPassword, signOut} from "firebase/auth";
+
+
+//This piece of code is used to check the users session token
+// import {onAuthStateChanged } from "firebase/auth";
+// onAuthStateChanged(auth, (user) => {
+//   if (user) {
+//     // User is signed in, see docs for a list of available properties
+//     // https://firebase.google.com/docs/reference/js/auth.user
+//     console.log(user.uid)
+//     // ...
+//   } else {
+//     // User is signed out
+//     // ...
+//   }
+// });
+
 
 
 function LoginPage() {
@@ -14,6 +30,7 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent form from refreshing the page
