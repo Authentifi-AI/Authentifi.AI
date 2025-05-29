@@ -13,7 +13,6 @@ export default function Navbar() {
         <Item value={"AuthentifiAI"} Link={"/"}></Item>
         <Item value={"Login"} Link={"Login"}></Item>
         <Item value={"Register"} Link={"Register"}></Item>
-        <Item value={"Profile"} Link={"Profile"}></Item>
       </nav>
     </>
   )

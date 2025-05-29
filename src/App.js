@@ -7,7 +7,6 @@ import LoginPage from "./LoginPage/Login"
 import RegisterPage from "./RegisterPage/Register"
 import MagicLogin from "./LoginPage/MagicLogin"
 import FinishSignIn from "./LoginPage/FinishSignIn"
-import ProfilePage from "./ProfilePage/Profile"
 
 export default function App() {
   return (
@@ -19,7 +18,6 @@ export default function App() {
           <Route path="/MagicLogin" element={<MagicLogin />} />
           <Route path="/Register" element={<RegisterPage />} />
           <Route path="/FinishSignIn" element={<FinishSignIn />} />
-          <Route path="/Profile" element={<ProfilePage />} />
         </Routes>
       </PageWrapper>
     </Router>
@@ -48,9 +46,6 @@ function PageWrapper({ children }) {
         break
       case "/Register":
         body.id = "Register-page"
-        break
-      case "/Profile":
-        body.id = "Profile-page"
         break
       default:
         body.id = ""
