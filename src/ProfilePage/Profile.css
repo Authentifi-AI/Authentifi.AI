@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#Profile-page {
+  height: 100%;
+  margin: 0;
+}
+
+#Profile-page #root {
+  display: flex;
+  flex-direction: column;
+  height: 100% \;;
+}
+;
+
+#Profile-page .profile-container {
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+#Profile-page .profile-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+#Profile-page button {
+  transition-property: background-color, transform;
+  transition-duration: 0.2s;
+}
+
+#Profile-page button:hover {
+  transform: translateY(-1px);
+}
