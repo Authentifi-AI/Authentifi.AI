@@ -1,0 +1,7 @@
+export { DashboardHeader } from "./dashboard-header"
+export { DashboardNav } from "./dashboard-nav"
+export { DashboardShell } from "./dashboard-shell"
+export { ResearchOverview } from "./research-overview"
+export { RecentProjects } from "./recent-projects"
+export { AIAssistant } from "./ai-assistant"
+export { ResearchTool } from "./research-tool"
