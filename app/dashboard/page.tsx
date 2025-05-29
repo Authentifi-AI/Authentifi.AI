@@ -3,9 +3,6 @@ import { DashboardShell } from "@/components/dashboard/dashboard-shell"
 import { ResearchOverview } from "@/components/dashboard/research-overview"
 import { RecentProjects } from "@/components/dashboard/recent-projects"
 
-// Add this line to make the page dynamic instead of static
-export const dynamic = "force-dynamic"
-
 export const metadata: Metadata = {
   title: "Dashboard - AuthentifiAI",
   description: "Manage your research projects and access AI tools",
