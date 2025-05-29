@@ -58,16 +58,6 @@ export default function Hero() {
     viewport: { once: false, amount: 0.3 },
   }
 
-  // else {
-  //     ;
-  //     LeftsectionVariants = {
-  //         initial: { opacity: 0, x: 75 },
-  //         whileInView: { opacity: 1, x: 0, transition: { delay: 0.1, duration: 0.25 } },
-  //         viewport: { once: false }
-
-  //     }
-  //
-
   return (
     <>
       <section className="grid text-center md:grid-cols-2 md:h-screen md:pb-30 md:mb-30 lg:items-start">
