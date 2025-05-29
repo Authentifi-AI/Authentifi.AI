@@ -1,31 +1,12 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require("fs")
+const path = require("path")
 
-// Define source and destination paths
-const buildPath = path.join(__dirname, "../build");
-const publicPath = path.join(buildPath, "public");
+// Define build path
+const buildPath = path.join(__dirname, "../build")
 
-// Ensure the public directory exists in build
-if (!fs.existsSync(publicPath)) {
-  fs.mkdirSync(publicPath);
-}
-
-// Move all image files to build/public/
-
+// Check if the build directory exists
 if (fs.existsSync(buildPath)) {
-  fs.readdirSync(buildPath).forEach(file => {
-
-    const filePath = path.join(buildPath, file);
-
-    //Make sure the file is not a directory
-    if(!fs.lstatSync(filePath).isDirectory())
-    {
-        const newFilePath = path.join(publicPath, file);
-        fs.renameSync(filePath, newFilePath);
-    } 
-  });
-
-  console.log("✅ Moved files to build/public/");
+  console.log("✅ Build directory exists, ready for deployment")
 } else {
-  console.log("⚠️ No files found in build/");
+  console.error("⚠️ Build directory not found. Make sure the build process completed successfully.")
 }
