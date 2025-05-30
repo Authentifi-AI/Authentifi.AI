@@ -1,5 +1,0 @@
-export { Navbar } from "./navbar"
-export { Footer } from "./footer"
-export { MainLayout } from "./main-layout"
-export { StandardLayout } from "./standard-layout"
-export { Logo } from "./logo"
