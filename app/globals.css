@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* AuthentifiAI color scheme - based on authentifi.ai */
+    --primary: 260 60% 55%; /* Purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 47% 11%; /* Dark blue */
+    --secondary-foreground: 0 0% 98%;
+
+    /* Accent color */
+    --accent: 280 75% 60%; /* Brighter purple */
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 260 30% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 260 60% 55%; /* Match primary */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%; /* Dark blue */
+    --foreground: 210 40% 98%;
+
+    /* AuthentifiAI dark mode colors */
+    --primary: 260 60% 55%; /* Purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 280 75% 60%; /* Brighter purple */
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 260 60% 55%; /* Match primary */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom gradient backgrounds for hero section - matching authentifi.ai */
+.hero-gradient {
+  background: linear-gradient(135deg, #9370db, #c77dff);
+}
+
+/* Custom animation for AI assistant typing indicator */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-custom {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Authentifi.ai specific styles */
+.authentifi-nav {
+  background-color: #1a2342; /* Dark blue nav bar */
+}
+
+.authentifi-gradient-bg {
+  background: linear-gradient(135deg, #9370db, #c77dff);
+}
+
+.authentifi-button {
+  background-color: #7b68ee;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.authentifi-button:hover {
+  background-color: #6a5acd;
+}
+
+.authentifi-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Ensure all sections have proper padding on mobile */
+  section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Ensure inline elements don't stick to edges */
+  .inline-flex,
+  .inline-block {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .flex.justify-center {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Make buttons more touch-friendly on mobile */
+  .authentifi-button {
+    min-width: 200px;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Aspect ratio utility */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+/* Add this to your existing CSS file */
+@media (max-width: 1023px) {
+  /* Ensure proper centering on mobile for early access section */
+  #early-access .space-y-4 ul li {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #early-access .space-y-4 p,
+  #early-access .space-y-4 h3 {
+    text-align: center;
+  }
+
+  #early-access .inline-flex {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
