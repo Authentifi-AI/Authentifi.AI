@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Loader2, CheckCircle } from "lucide-react"
+import { submitEarlyAccess } from "@/app/actions/submit-early-access"
 
 export function EarlyAccessFormSimple() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
@@ -26,38 +27,15 @@ export function EarlyAccessFormSimple() {
     e.preventDefault()
     setStatus("loading")
 
+    const formData = new FormData()
+    formData.append("name", formData.name)
+    formData.append("email", formData.email)
+    formData.append("role", formData.role)
+    formData.append("interest", formData.interest)
 
+    const result = await submitEarlyAccess(formData)
 
-    try {
-      //API call for teable to add the new user
-      const TableID = "tblHLbw0rxqKLJ6QdQ2"
-      const response = await fetch(`https://app.teable.io/api/table/${TableID}/record`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_TEABLE_ADD_LEAD_KEY}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          records: [
-            {
-              fields: {
-                Name: formData.name,
-                Email: formData.email,
-                Role: formData.role,
-                Interest: formData.interest,
-                SubmittedAt: new Date()
-              }
-            }
-          ]
-        })
-      });
-
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.message || 'Something went wrong');
-      }
-
-      // Success
+    if (result.success) {
       setStatus("success")
       setFormData({
         name: "",
@@ -65,7 +43,7 @@ export function EarlyAccessFormSimple() {
         role: "",
         interest: "",
       })
-    } catch (error) {
+    } else {
       setStatus("error")
     }
   }
