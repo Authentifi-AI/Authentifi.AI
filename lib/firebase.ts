@@ -1,7 +1,7 @@
-import { initializeApp } from "firebase/app"
-import { getAuth } from "firebase/auth" // For authentication
-import { getFirestore } from "firebase/firestore" // For Firestore Database
-import { getStorage } from "firebase/storage" // For File Storage
+import { initializeApp, getApps, getApp } from "firebase/app"
+import { getAuth } from "firebase/auth"
+import { getFirestore } from "firebase/firestore"
+import { getStorage } from "firebase/storage"
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -13,15 +13,28 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
 
-// Add validation to ensure Firebase is properly configured
+// Validate Firebase configuration
 if (!firebaseConfig.apiKey || !firebaseConfig.authDomain || !firebaseConfig.projectId) {
   console.error("Firebase configuration is incomplete. Please check your environment variables.")
+  throw new Error("Firebase configuration is incomplete")
 }
 
-const app = initializeApp(firebaseConfig)
+// Initialize Firebase app (avoid duplicate initialization)
+const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
 
-// Export services for use in other files
+// Initialize Firebase services
 export const auth = getAuth(app)
 export const db = getFirestore(app)
 export const storage = getStorage(app)
+
+// Set persistence for auth
+if (typeof window !== "undefined") {
+  // Only run on client side
+  import("firebase/auth").then(({ setPersistence, browserLocalPersistence }) => {
+    setPersistence(auth, browserLocalPersistence).catch((error) => {
+      console.error("Error setting auth persistence:", error)
+    })
+  })
+}
+
 export default app
