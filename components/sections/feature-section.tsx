@@ -25,7 +25,7 @@ export function FeatureSection() {
           </div>
         </div>
         {/* Added px-2 for mobile padding */}
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3 px-2">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8 px-2">
           {featureConfig.items.map((feature, index) => (
             <FeatureCard
               key={index}

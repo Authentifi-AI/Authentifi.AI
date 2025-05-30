@@ -14,7 +14,7 @@ export function FeatureCard({ title, description, icon, href, className }: Featu
   const CardContent = (
     <div
       className={cn(
-        "flex flex-col items-center space-y-2 rounded-lg authentifi-card p-6 shadow-lg transition-all",
+        "flex flex-col items-center space-y-3 rounded-lg authentifi-card p-6 shadow-lg transition-all min-h-[200px] justify-center",
         href && "hover:shadow-xl",
         className,
       )}
@@ -22,8 +22,8 @@ export function FeatureCard({ title, description, icon, href, className }: Featu
       <div className="rounded-full bg-white/10 p-3 group-hover:bg-white/20">
         <DynamicIcon name={icon} className="h-6 w-6 text-white" />
       </div>
-      <h3 className="text-xl font-bold text-white">{title}</h3>
-      <p className="text-center text-white/80">{description}</p>
+      <h3 className="text-xl font-bold text-white text-center">{title}</h3>
+      <p className="text-center text-white/80 text-sm leading-relaxed">{description}</p>
     </div>
   )
 
