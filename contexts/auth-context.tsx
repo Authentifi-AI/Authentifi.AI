@@ -1,10 +1,9 @@
 "use client"
 
 import type React from "react"
-
 import { createContext, useContext, useEffect, useState } from "react"
-import { auth } from "@/lib/firebase"
-import { onAuthStateChanged, type User } from "firebase/auth"
+import type { User } from "firebase/auth"
+import { getFirebaseAuth } from "@/lib/firebase"
 
 type AuthContextType = {
   user: User | null
@@ -21,12 +20,24 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user)
-      setLoading(false)
-    })
+    const setupAuth = async () => {
+      try {
+        const auth = await getFirebaseAuth()
+        const { onAuthStateChanged } = await import("firebase/auth")
 
-    return () => unsubscribe()
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+          setUser(user)
+          setLoading(false)
+        })
+
+        return () => unsubscribe()
+      } catch (error) {
+        console.error("Error setting up auth:", error)
+        setLoading(false)
+      }
+    }
+
+    setupAuth()
   }, [])
 
   return <AuthContext.Provider value={{ user, loading }}>{children}</AuthContext.Provider>

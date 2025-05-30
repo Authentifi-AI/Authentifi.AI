@@ -1,8 +1,7 @@
-import { initializeApp, getApps, getApp } from "firebase/app"
-import { getAuth } from "firebase/auth"
-import { getFirestore } from "firebase/firestore"
-import { getStorage } from "firebase/storage"
+// Import Firebase core functionality
+import { initializeApp } from "firebase/app"
 
+// Define Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -13,28 +12,13 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
 
-// Validate Firebase configuration
-if (!firebaseConfig.apiKey || !firebaseConfig.authDomain || !firebaseConfig.projectId) {
-  console.error("Firebase configuration is incomplete. Please check your environment variables.")
-  throw new Error("Firebase configuration is incomplete")
-}
+// Initialize Firebase
+const app = initializeApp(firebaseConfig)
 
-// Initialize Firebase app (avoid duplicate initialization)
-const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
-
-// Initialize Firebase services
-export const auth = getAuth(app)
-export const db = getFirestore(app)
-export const storage = getStorage(app)
-
-// Set persistence for auth
-if (typeof window !== "undefined") {
-  // Only run on client side
-  import("firebase/auth").then(({ setPersistence, browserLocalPersistence }) => {
-    setPersistence(auth, browserLocalPersistence).catch((error) => {
-      console.error("Error setting auth persistence:", error)
-    })
-  })
-}
-
+// Export the Firebase app instance
 export default app
+
+// Export Firebase services lazily to avoid initialization issues
+export const getFirebaseAuth = () => import("firebase/auth").then(({ getAuth }) => getAuth(app))
+export const getFirebaseFirestore = () => import("firebase/firestore").then(({ getFirestore }) => getFirestore(app))
+export const getFirebaseStorage = () => import("firebase/storage").then(({ getStorage }) => getStorage(app))
