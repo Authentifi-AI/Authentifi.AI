@@ -83,7 +83,11 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <Link href="/login">
-            <Button variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
+            <Button
+              variant="outline"
+              size="sm"
+              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50"
+            >
               Log in
             </Button>
           </Link>
@@ -139,7 +143,10 @@ export function Navbar() {
             </Link>
             <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/10">
               <Link href="/login" onClick={() => setIsMenuOpen(false)}>
-                <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10">
+                <Button
+                  variant="outline"
+                  className="w-full border-white/30 text-white hover:bg-white/10 hover:border-white/50"
+                >
                   Log in
                 </Button>
               </Link>
