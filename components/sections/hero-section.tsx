@@ -40,8 +40,8 @@ export function HeroSection() {
               <a href="#early-access" onClick={handleEarlyAccessClick}>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="w-full min-[400px]:w-auto border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
+                  variant="ghost"
+                  className="w-full min-[400px]:w-auto border border-white/40 text-white hover:bg-white/15 hover:border-white/60 bg-transparent backdrop-blur-sm"
                 >
                   Get Early Access
                 </Button>
